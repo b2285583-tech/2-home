@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$c-cherry:#AE1332;
+$c-white:#FFFFFF;
+$c-btn: #ff5277;
+
+  @mixin font($f-family, $f-style, $f-weight, $f-size, $f-line) {
+    font-family: $f-family;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    font-size: $f-size;
+    line-height: $f-line;
+    }
+
+
+.header{
+width: 100%;
+height: 50px;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 0px 32px;
+
+&__menu{
+    display: flex;
+    gap: 15px;
+
+&__btn{
+    color: $c-cherry;
+    background: $c-white;
+    border: none;
+    @include font( "DM Sans", regular, 400, 18px, 14px);
+
+    &:hover{
+        transform: translateY(-3px);
+        color: $c-btn;
+    }
+
+    &:active{
+        transform: scale(0.95);
+    }
+}
+}
+
+&__logo {
+    margin: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+&__title{
+    color: $c-cherry;
+    @include font( "Fjalla One", regular, 400, 18px, 14px);
+}
+
+&__img{
+    margin: 19px;
+    height: 24px;
+
+    
+    &:hover{
+        transform: translateY(-3px);
+
+    }
+
+    &:active{
+        transform: scale(0.95);
+    }
+}
+}
